@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Twitch OAuth Redirect</title>
+</head>
+<body>
+<h2>Twitch OAuth Token Capture</h2>
+<p id="token">Waiting for token...</p>
+<script>
+  // The token comes in the URL hash after the #
+  const hash = window.location.hash.substr(1); // remove #
+  document.getElementById('token').textContent = "URL fragment: " + hash;
+  console.log("Twitch token data:", hash);
+</script>
+</body>
+</html>
